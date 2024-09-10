@@ -9,7 +9,7 @@ const headerText = [
 const contactText = [
   "contact me:",
   "bustos@vibing.studio",
-  "⚡"
+  " "
 ];
 
 const projects = [
@@ -63,7 +63,7 @@ export function RickWebsite() {
         p, li { color: white; }
       `}</style>
       
-      <h1 className="text-white font-bold">
+      <h1 className="text-white font-bold mb-2">
         {headerText.map((text, index) => (
           <React.Fragment key={index}>
             {text}
@@ -73,15 +73,17 @@ export function RickWebsite() {
       </h1>
       
       <p>{contactText[0]}</p>
-      <a href="mailto:me@jai.vin" className="text-blue-500 underline block">{contactText[1]}</a>
+      <a href="mailto:bustos@vibing.studio" className="text-blue-500 underline block">{contactText[1]}</a>
       <a href="#" className="text-blue-500 underline block">{contactText[2]}</a>
       
-      <h2 className="text-blue-500 mt-8">checkout my cool projects</h2>
-      <ul className="list-none pl-0">
+      <div className="mb-6"></div> {/* Added spacing */}
+      
+      <h2 className="text-blue-500 mb-2">checkout my cool projects</h2>
+      <ul className="list-none pl-0 mb-6">
         {projects.map((project, index) => (
           <React.Fragment key={index}>
             <li className="text-blue-500">{project.title}</li>
-            <li className="justify-text">{project.description}</li>
+            <li className="justify-text mb-6">{project.description}</li>
           </React.Fragment>
         ))}
       </ul>  
